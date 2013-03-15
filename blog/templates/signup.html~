@@ -1,0 +1,67 @@
+<style type ="text/css">
+.mybutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+}
+.mybutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+}
+.mybutton:active {
+	position:relative;
+	top:1px;
+}
+
+input {
+    border: 1px solid #006;
+    background: #ffc;
+	font-size: 12pt;
+	font-family: sans-serif;
+}
+label {
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 12pt;
+	
+}
+body {
+	background: url(http://87pixels.com/wp-content/uploads/2011/05/wordpress-logo.jpg) no-repeat;
+	background-size: 100%;
+	color:white;
+	font-weight:bold;
+	}
+
+
+</style>
+<html><title>Sign Up:create new account</title><body><br>
+<center><form method ="POST" action="/account/create">{{message}}<br>
+<label>Username</label><br>
+<input type="text" name="username" id="username" maxlength="25" required="true" pattern="[A-Za-z0-9]*"><br>
+<label>Password</label><br>
+<input type="password" name="password" id="password" required="true"><br><br>
+<input id ="create" class ="mybutton" type=submit value="Create Account">
+<a href="/account/login" class="mybutton">Cancel</a>
+</form>
+</center>
+</body>
+</html>
